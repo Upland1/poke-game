@@ -1,33 +1,17 @@
-import React from "react";
 import '../styles.css'
 const Actions = () => {
   return (
     <div
-      style={{
-        width: "60px",
-        height: "60px",
-        display: "flex",
-        backgroundColor: "black",
-      }}
+      class="button-container-ab"
     >
       <div>
         <button
-          style={{
-            backgroundColor: "#821660",
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-          }}
+          class="action-btn"
         ></button>
       </div>
       <div>
         <button
-          style={{
-            backgroundColor: "#821660",
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-          }}
+          class="action-btn"
         ></button>
       </div>
     </div>

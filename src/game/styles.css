@@ -1,8 +1,94 @@
+.container-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.pad-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #010104;
+  box-shadow: 1px 2px 3px #848484;
+}
 
 
 .action-btn {
-    background-color: "#821660"; 
-    width: "40px";
-    height: "40px";
-    border-radius: "50%";
+  background-color: #821660;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.button-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+
+}
+.button-container-ab {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  display: flex;
+  transform: rotate(-45deg);
+}
+
+
+
+.pad-color {
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+}
+
+#button-start {
+  width: 20px;
+  height: 60px;
+  background-color: black;
+  transform: rotate(45deg);
+  border-radius: 25%;
+}
+
+#button-select {
+  width: 20px;
+  height: 60px;
+  background-color: black;
+  margin-left: 15px;
+  transform: rotate(45deg);
+  border-radius: 25%;
+}
+
+* PAD styles */ .container-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.pad-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #010104;
+  box-shadow: 1px 2px 3px #848484;
+}
+
+.container-central {
+  display: flex;
+}
+
+.screen {
+  width: 90%;
+  height: 200px;
+  background-color: #9ca04c;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container-screen{
+  padding-top: 5%;
+  padding-left: 10%;
 }

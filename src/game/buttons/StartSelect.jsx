@@ -1,34 +1,17 @@
-import React from "react";
-
+import '../styles.css'
 const StartSelect = () => {
   return (
     <div style={{ paddingTop: "30%" }}>
       <div
-        style={{
-          width: "60px",
-          height: "60px",
-          display: "flex",
-        }}
+        class="button-container"
       >
-        {/* Boton select start */}
+        {/* Boton start */}
         <button
-          style={{
-            width: "20px",
-            height: "60px",
-            backgroundColor: "black",
-            transform: "rotate(45deg)",
-            borderRadius: "25%",
-          }}
+          id="button-start"
         ></button>
+        {/* Boton select */}
         <button
-          style={{
-            width: "20px",
-            height: "60px",
-            backgroundColor: "black",
-            marginLeft: "15px",
-            transform: "rotate(45deg)",
-            borderRadius: "25%",
-          }}
+          id="button-select"
         ></button>
       </div>
     </div>
