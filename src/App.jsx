@@ -15,6 +15,8 @@ import { useState, useEffect } from "react";
 function App() {
 
   const [pokemones, setPokemones] = useState([])
+  const [hoverPokemon, setHoverPokemon] = useState(0)
+  const [selectedPokemones, setSelectedPokemons] = useState([])
 
   const BASE_URL = "https://pokeapi.co/api/v2/"
 
@@ -32,8 +34,33 @@ function App() {
     return data
   }
 
-  const handlePress = (direction) => {
-    console.log(direction)
+  const handlePress = (dir) => {
+    console.log(dir);
+    if (dir === 'right') {
+      setHoverPokemon(hoverPokemon + 1);
+    }
+    if (dir === 'left') {
+      setHoverPokemon(hoverPokemon - 1);
+    }
+  };
+
+  const handleSelectPokemon = () => {
+    console.log('select pokemon', hoverPokemon);
+    const pokemonSelected = pokemones.filter(
+      (pokemon) => pokemon.id === hoverPokemon
+    );
+
+    const selections = [pokemonSelected, computerSelection()]
+    console.log({selections})
+
+    setSelectedPokemons(selections)
+  };
+
+  const computerSelection = () => {
+    const randomId = Math.floor(Math.random() * pokemones.length)
+    const selectElement = pokemones.filter((pokemon) => pokemon.id == randomId)
+
+    return selectElement
   }
 
   useEffect(() => {
@@ -47,14 +74,14 @@ function App() {
         {/* container game */}
         <ContainerGame>
           {/* container screen */}
-          <Screen pokemones={pokemones} />
+          <Screen pokemones={pokemones} hoverPokemon={hoverPokemon} selectedPokemones={selectedPokemones} />
         
           {/* container buttons */}
           <ContainerButtons>
             {/* Pad direccional */}
             <Pad handlePress={handlePress}/>
             {/* Botones start select */}
-            <StartSelect />
+            <StartSelect handleSelectPokemon={handleSelectPokemon} />
             {/* Boton A y B */}
             <Actions />
           </ContainerButtons>
