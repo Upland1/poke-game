@@ -79,7 +79,7 @@
 
 .screen {
   width: 95%;
-  height: 200px;
+  height: 220px;
   background-color: #9ca04c;
   display: flex;
   flex-wrap: wrap;
@@ -90,4 +90,20 @@
 .container-screen{
   padding-top: 5%;
   padding-left: 10%;
+}
+
+.hp_bar_container {
+  background-color: #ccc;  
+  width: 100px;           
+  height: 12px;            
+  border: 1px solid #000;  
+  border-radius: 5px;      
+  overflow: hidden;        
+  margin-bottom: 5px;      
+}
+
+.hp_bar {
+  background-color: green; 
+  height: 100%;            
+  transition: width 0.3s ease; 
 }

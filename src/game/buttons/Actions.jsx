@@ -1,18 +1,18 @@
 import '../styles.css'
-const Actions = () => {
+const Actions = ({handleAttack}) => {
   return (
     <div
       class="button-container-ab"
     >
       <div>
         <button
-          class="action-btn"
-        ></button>
+          class="action-btn" onClick={handleAttack}
+        >A</button>
       </div>
       <div>
         <button
           class="action-btn"
-        ></button>
+        >B</button>
       </div>
     </div>
   );
